@@ -47,16 +47,16 @@ function likeInteger() {
   for (var i = 0; i < likedNumbers.length;i++){
     if(likedNumbers[i]=== num)
     likeCount++;
-    entry.innerText= `${num} has been liked ${likeCount} times` 
+    entry.innerText= `${num} has been liked ${likeCount} times`
   }
-  
+
   ul.appendChild(entry)
 
 };
 
 function pauseInteger(){
   object = document.getElementById("pause")
-  if(playing === 0){ 
+  if(playing === 0){
       clearInterval(timer),
       playing = 1
       object.innerText = "resume"
@@ -75,13 +75,13 @@ function pauseInteger(){
 
 
 function addComment(event){
-  
+
   formInputValue = document.getElementById("comment-input")
   newPara = document.createElement('p');
   newCommentNode = document.createTextNode(formInputValue.value)
   newPara.appendChild(newCommentNode)
   commentDiv.appendChild(newPara)
-  
+
 
 };
 
@@ -123,7 +123,3 @@ form.addEventListener("submit", function(){
 // When 'resume' is clicked, it should restart the counter and re-enable the buttons.                   [X]
 
 // As a user, I can leave comments on my gameplay, such as: "Wow, what a fun game this is."             [X]
-
-
-
-
